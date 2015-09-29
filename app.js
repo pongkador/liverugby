@@ -14,6 +14,12 @@ app.get('/admin', function(req, res){
 
 io.on('connection', function(socket){
   console.log('a user connected');
+  
+//send to front office
+socket.emit('news', 'welcome');
+
+
+//listen to back office
   socket.on('message', function (body) {
     console.log(body);
   });

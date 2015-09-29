@@ -5,4 +5,7 @@
 
 <script>
   var socket = io();
+  socket.on('news', function (body) {
+    console.log(body);
+  })
 </script>
